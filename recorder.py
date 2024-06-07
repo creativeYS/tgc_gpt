@@ -1,5 +1,5 @@
 # pip install pyaudio
-import pyaudio, wave, time, threading
+import pyaudio, wave, threading
 
 # 녹음 설정
 FORMAT = pyaudio.paInt16  # 16비트 형식

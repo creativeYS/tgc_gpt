@@ -1,18 +1,11 @@
 # pip install flask
-import os  # for environment variables
-
-# pip install openai
-import openai  # for generating embeddings
 from flask import Flask, jsonify, request
 
 import gpt
 import recorder
 import stt
 
-client = openai.OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 app = Flask(__name__)
-
-GPT_MODEL = "gpt-4o"
 
 @app.route("/record/start", methods=['POST'])
 def start():
